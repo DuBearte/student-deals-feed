@@ -32,7 +32,12 @@ Edit `deals.json` and open a pull request, or push to `main` if it's your repo. 
 
 `check.py` runs on every push and once a day. It fails on invalid JSON, a missing or
 repeated field, an `id` used twice, or an entry whose `expires` has passed, so stale
-deals show up as a red run instead of lingering in the feed.
+deals show up as a red run instead of lingering in the feed. It also warns about any
+entry not re-checked in 180 days.
+
+GitHub switches the daily run off after 60 days without a commit; any push turns it
+back on. The extension checks `expires` itself too, so the feed job is a reminder, not
+the safety net.
 
 ```sh
 python3 check.py

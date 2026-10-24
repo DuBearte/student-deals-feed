@@ -6,7 +6,17 @@ import re
 import sys
 
 FIELDS = {"id", "store", "domain", "deal", "how", "url", "expires", "updated"}
-DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+def date(s):
+    """A real calendar date as YYYY-MM-DD, else None."""
+    try:
+        return datetime.date.fromisoformat(str(s)) if re.match(r"^\d{4}-\d{2}-\d{2}$", str(s)) else None
+    except ValueError:
+        return None
+
+
+# A deal nobody has re-checked for this long is reported, so it gets looked at.
+STALE_DAYS = 180
 
 
 def main() -> int:
@@ -21,9 +31,10 @@ def main() -> int:
     if not isinstance(deals, list):
         errors.append("`deals` must be a list")
         deals = []
-    if not DATE.match(str(feed.get("updated", ""))):
+    if date(feed.get("updated")) is None:
         errors.append("`updated` must be YYYY-MM-DD")
-    today = datetime.date.today().isoformat()
+    today = datetime.date.today()
+    stale = []
     seen = set()
     for i, d in enumerate(deals):
         where = f"deal {i} ({d.get('id', '?')})" if isinstance(d, dict) else f"deal {i}"
@@ -46,17 +57,23 @@ def main() -> int:
             errors.append(f"{where}: `url` must start with https://")
         if d.get("domain", "").startswith("www.") or "/" in str(d.get("domain", "")):
             errors.append(f"{where}: `domain` is a bare host, no www. or path")
-        if not DATE.match(str(d.get("updated", ""))):
+        checked = date(d.get("updated"))
+        if checked is None:
             errors.append(f"{where}: `updated` must be YYYY-MM-DD")
+        elif (today - checked).days > STALE_DAYS:
+            stale.append(f"{where}: not checked since {checked}; look it up again and set `updated`")
         exp = d.get("expires")
         if exp is not None:
-            if not DATE.match(str(exp)):
+            when = date(exp)
+            if when is None:
                 errors.append(f"{where}: `expires` must be YYYY-MM-DD or null")
-            elif exp < today:
+            elif when < today:
                 errors.append(f"{where}: expired on {exp}; remove it or extend it")
     for e in errors:
         print(e)
-    print(f"{len(deals)} deals, {len(errors)} problems")
+    for w in stale:
+        print(f"warning: {w}")
+    print(f"{len(deals)} deals, {len(errors)} problems, {len(stale)} stale")
     return 1 if errors else 0
 
 
