@@ -1,0 +1,19 @@
+name: Check the feed
+
+on:
+  push:
+  pull_request:
+  schedule:
+    # Daily, so a deal that expires shows up as a failed run.
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 check.py

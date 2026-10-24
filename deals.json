@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "updated": "2026-10-24",
+  "deals": [
+    {
+      "id": "github-student-pack",
+      "store": "GitHub",
+      "domain": "github.com",
+      "deal": "Student Developer Pack: free developer tools and credits",
+      "how": "Apply with a school email or proof of enrolment at education.github.com",
+      "url": "https://education.github.com/pack",
+      "expires": null,
+      "updated": "2026-10-24"
+    },
+    {
+      "id": "spotify-premium-student",
+      "store": "Spotify",
+      "domain": "spotify.com",
+      "deal": "Premium Student at a reduced monthly price",
+      "how": "Verify enrolment through SheerID on the Spotify student page",
+      "url": "https://www.spotify.com/student/",
+      "expires": null,
+      "updated": "2026-10-24"
+    },
+    {
+      "id": "apple-education",
+      "store": "Apple",
+      "domain": "apple.com",
+      "deal": "Education pricing on Mac and iPad",
+      "how": "Shop the Education Store; verification through UNiDAYS in some countries",
+      "url": "https://www.apple.com/us-edu/store",
+      "expires": null,
+      "updated": "2026-10-24"
+    },
+    {
+      "id": "amazon-prime-student",
+      "store": "Amazon",
+      "domain": "amazon.com",
+      "deal": "Prime Student: free trial, then half the price of Prime",
+      "how": "Sign up with a .edu email or proof of enrolment",
+      "url": "https://www.amazon.com/primestudent",
+      "expires": null,
+      "updated": "2026-10-24"
+    },
+    {
+      "id": "adobe-creative-cloud-student",
+      "store": "Adobe",
+      "domain": "adobe.com",
+      "deal": "Creative Cloud All Apps at the student and teacher price",
+      "how": "Verify with a school email or ID during checkout",
+      "url": "https://www.adobe.com/creativecloud/buy/students.html",
+      "expires": null,
+      "updated": "2026-10-24"
+    },
+    {
+      "id": "microsoft-365-education",
+      "store": "Microsoft",
+      "domain": "microsoft.com",
+      "deal": "Microsoft 365 for free with a valid school email",
+      "how": "Enter your school email on the Microsoft 365 Education page",
+      "url": "https://www.microsoft.com/en-us/education/products/office",
+      "expires": null,
+      "updated": "2026-10-24"
+    },
+    {
+      "id": "jetbrains-students",
+      "store": "JetBrains",
+      "domain": "jetbrains.com",
+      "deal": "All JetBrains IDEs free for students",
+      "how": "Apply with a school email, ISIC card or GitHub Student Pack",
+      "url": "https://www.jetbrains.com/community/education/",
+      "expires": null,
+      "updated": "2026-10-24"
+    },
+    {
+      "id": "notion-education",
+      "store": "Notion",
+      "domain": "notion.so",
+      "deal": "Notion Plus free for students",
+      "how": "Sign up with a school email, then switch to the Education plan in settings",
+      "url": "https://www.notion.so/product/notion-for-education",
+      "expires": null,
+      "updated": "2026-10-24"
+    },
+    {
+      "id": "figma-education",
+      "store": "Figma",
+      "domain": "figma.com",
+      "deal": "Figma and FigJam professional features free for students",
+      "how": "Apply on the Figma education page with proof of enrolment",
+      "url": "https://www.figma.com/education/",
+      "expires": null,
+      "updated": "2026-10-24"
+    },
+    {
+      "id": "autodesk-education",
+      "store": "Autodesk",
+      "domain": "autodesk.com",
+      "deal": "Fusion, AutoCAD and other Autodesk products free for education",
+      "how": "Create an Autodesk Education account and confirm eligibility",
+      "url": "https://www.autodesk.com/education/edu-software/overview",
+      "expires": null,
+      "updated": "2026-10-24"
+    },
+    {
+      "id": "youtube-premium-student",
+      "store": "YouTube",
+      "domain": "youtube.com",
+      "deal": "YouTube Premium Student plan at a reduced price",
+      "how": "Verify through SheerID on the YouTube Premium student page",
+      "url": "https://www.youtube.com/premium/student",
+      "expires": null,
+      "updated": "2026-10-24"
+    },
+    {
+      "id": "unity-student",
+      "store": "Unity",
+      "domain": "unity.com",
+      "deal": "Unity Student plan: Pro features free for students 16+",
+      "how": "Apply through the GitHub Student Developer Pack",
+      "url": "https://unity.com/products/unity-student",
+      "expires": null,
+      "updated": "2026-10-24"
+    }
+  ]
+}
