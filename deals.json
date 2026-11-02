@@ -1,7 +1,17 @@
 {
   "version": 1,
-  "updated": "2026-10-24",
+  "updated": "2026-11-02",
   "deals": [
+    {
+      "id": "kilobat-pro-students",
+      "store": "Kilobat",
+      "domain": "kilobat.app",
+      "deal": "Pro free for one year on two Macs for eligible students aged 13+",
+      "how": "Email from a school address; request another year while enrolled in a qualifying degree-granting course",
+      "url": "https://kilobat.app/students",
+      "expires": null,
+      "updated": "2026-11-02"
+    },
     {
       "id": "github-student-pack",
       "store": "GitHub",
